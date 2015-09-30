@@ -20,62 +20,34 @@ require.def("store/js/app",
 		Label, 
 		HorizontalCarousel, 
 		DataSource, 
-		ProduitSource, 
-		ProduitFormatter,
+		AppSource, 
+		AppFormatter,
 		Texte
 		){ 
 		return Component.extend({ 
 			init: function(){ 
 			var self = this; 
-			this._super("appstore"); 
+			this._super("store"); 
 
 			//l'application
 			this._application = this.getCurrentApplication();
 			this._device = this._application.getDevice();
 
 
-			//les details du categorie dans un component
-			this._componentDetails = new Component("componentDetails");
-			this._componentDetails.addClass("itemMenuApp");
-			this._componentDetails.texte = new Texte("detailsCategoriesProduit");
-			this._componentDetails.appendChildWidget(this._componentDetails.texte);
-			
-			//les categories dans un carousel
-			this._produitsource = new DataSource(this, new ProduitSource(), "loadData");
-			this._produitformatter = new ProduitFormatter(this._application, this._componentDetails);
+			var texte = new Texte();
+			texte.setText("Bienvenue dans le store de TNT.<br> Appuyer sur ENTRER pour voir le store");
 
-			var carousel = new HorizontalCarousel("carouselProduits", this._produitformatter, this._produitsource);
-			carousel.addClass("itemMenuApp");
+		//	this.appendChildWidget(texte);
+			var bouton  = new Bouton();
+			bouton.appendChildWidget(texte);
+			this.appendChildWidget(bouton);
+			this.addEventListener("select", function(evt){
+			//	console.log(evt.keyCode);
+				self._application.pushComponent("maincontainer", "store/js/accueil");
 
-			//le menu de la page
-			var menu = new VerticalList("menuapp");
-			menu.appendChildWidget(carousel);
-			menu.appendChildWidget(this._componentDetails);
-			self.appendChildWidget(menu);
+			});
 
-			},
-
-			//configuration de la carousel
-            _getCarouselConfig: function (idd, datasource, formatter) {
-                return {
-                    id: idd,
-                    description: "Carousel example, LEFT and RIGHT to navigate, SELECT to go back",
-                    dataSource: new DataSource(null, datasource, 'loadData'),
-                    formatter: formatter,
-                    orientation: Carousel.orientations.HORIZONTAL,
-                    carouselId: 'verticalCullingCarousel',
-                    animOptions: {
-                        skipAnim: false
-                    },
-                    alignment: {
-                        normalisedAlignPoint: 0.5,
-                        normalisedWidgetAlignPoint: 0.5
-                    },
-                    initialItem: 4,
-                    type: "CULLING",
-                    lengths: 264
-                };
-            }
+			}
 		}); 
 	} 
 ); 

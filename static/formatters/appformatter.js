@@ -26,14 +26,29 @@ require.def("store/static/formatters/appformatter",
 
 				var bouton  = new Button("appBouton"+item.id);
 				bouton.addClass("appBouton");
-				var image = new Image("img-id-app", item.img, {width:100, height:100});
+				var image = new Image("img-id-app", item.img, {width:200, height:200});
 				bouton.appendChildWidget(image); 
-				bouton.appendChildWidget(new Label("Voir")); 
+				var titre = new Label(item.titre);
+				 
+				//console.log(item.titre);
 
 				bouton.addEventListener("select", function(evt){
 					document.location.href=item.lien;
 				});
 
+				bouton.addEventListener("focus", function(evt){
+                    bouton.addClass("appFocus");
+                   // image.addClass("imageAppFocus");
+                  	self._componentTexte.texte.setText(item.details);
+                  	bouton.appendChildWidget(titre);
+
+                });
+
+                bouton.addEventListener("blur", function(evt){
+                    bouton.removeClass("appFocus");
+                  //  image.removeClass("imageFocus");
+                  	bouton.removeChildWidget(titre);
+                });
 
 				return bouton;
 			}
