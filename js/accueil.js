@@ -57,29 +57,7 @@ require.def("store/js/accueil",
 			//	if(evt.keyCode===2)
 			});
 
-			},
-
-			//configuration de la carousel
-            _getCarouselConfig: function (idd, datasource, formatter) {
-                return {
-                    id: idd,
-                    description: "Carousel example, LEFT and RIGHT to navigate, SELECT to go back",
-                    dataSource: new DataSource(null, datasource, 'loadData'),
-                    formatter: formatter,
-                    orientation: Carousel.orientations.HORIZONTAL,
-                    carouselId: 'verticalCullingCarousel',
-                    animOptions: {
-                        skipAnim: false
-                    },
-                    alignment: {
-                        normalisedAlignPoint: 0.5,
-                        normalisedWidgetAlignPoint: 0.5
-                    },
-                    initialItem: 4,
-                    type: "CULLING",
-                    lengths: 264
-                };
-            }
+			}
 		}); 
 	} 
 ); 

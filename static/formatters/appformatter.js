@@ -29,6 +29,7 @@ require.def("store/static/formatters/appformatter",
 				var image = new Image("img-id-app", item.img, {width:200, height:200});
 				bouton.appendChildWidget(image); 
 				var titre = new Label(item.titre);
+				
 				 
 				//console.log(item.titre);
 

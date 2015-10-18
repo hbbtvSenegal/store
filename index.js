@@ -108,11 +108,11 @@ function returnResponse(url, response)
 
 	response.write("</head>");
 
-	response.write("<body style='background: #000;'>");
+	response.write("<body style='background: #000; text-align:center;'>");
 	antie.getDeviceBody(device_configuration_decoded);
 
 	response.write("<div id='static-loading-screen' style='position: absolute; width: 100%; height: 100%; background: #000;'>");
-	response.write("Application is loading...");
+	//response.write("Application is loading...");
 	response.write("</div>");
 
 	response.write("<div id=\"app\" class=\"display-none\"><\/div>");

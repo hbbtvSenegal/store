@@ -13,7 +13,7 @@ require.def("store/static/datasources/appsource",
 									"img" : "static/image/vod.png",
 									"fichier": "store/js/storehabillement",
 									"lien" : "",
-									"details" : "Video à la demande.<br> Retouvez de nombreux videos sur toutes les catégories"
+									"details" : "<div style='color:red;font-size:42px;text-align:center;'>Video à la demande.</div>Retouvez les plus belles vidéos à la demande."
 								}, 
 								{ 
 									"id": "2", 
@@ -21,7 +21,7 @@ require.def("store/static/datasources/appsource",
 									"img" : "static/image/jeuxvideo.png",
 									"fichier": "store/js/storegadget",
 									"lien": "",
-									"details" : "Jeux videos en ligne. Retoruvez tous nos jeux videos"
+									"details" : "<div style='color:red;font-size:42px;text-align:center;'>Jeux videos en ligne.</div>Retrouvez tous nos jeux videos"
 								}, 
 								{ 
 									"id": "3", 
@@ -29,15 +29,15 @@ require.def("store/static/datasources/appsource",
 									"img" : "static/image/achat.png",
 									"fichier": "store/js/storevilla",
 									"lien": "../siteDeVente/index.php",
-									"details" : "Achat en ligne. Faites des achats en ligne plus facilement"
+									"details" : "<div style='color:red;font-size:42px;text-align:center;'>Achat en ligne</div>Faites des achats en ligne plus facilement"
 								},
 								{ 
 									"id": "4", 
 									"titre": "Television sur internet", 
-									"img" : "static/image/mouton1.png",
+									"img" : "static/image/tv.jpg",
 									"fichier": "store/js/storehabillement",
 									"lien": "",
-									"details" : "Regarder la télévision en ligne plus confortablement"
+									"details" : "<div style='color:red;font-size:42px;text-align:center;'>Télévision sur internet</div>Regarder plus de chaînes de télévvision"
 								}, 
 								{ 
 									"id": "5", 
@@ -45,7 +45,7 @@ require.def("store/static/datasources/appsource",
 									"img" : "static/image/horloge.png",
 									"fichier": "store/js/storegadget",
 									"lien": "",
-									"details" : "Tout sur les gadgets"
+									"details" : "<div style='color:red;font-size:42px;text-align:center;'>Gadgets</div>Regarder les plus jolis gadgets"
 								}, 
 								{ 
 									"id": "6", 
@@ -53,7 +53,7 @@ require.def("store/static/datasources/appsource",
 									"img" : "static/image/cours.png",
 									"fichier": "store/js/storevilla",
 									"lien": "",
-									"details" : "Cours en ligne. <br> Regarder tous les cours en ligne que vous voulez!"
+									"details" : "<div style='color:red;font-size:42px;text-align:center;'>Cours en ligne<div>Regarder tous les cours en ligne que vous voulez!"
 								}
 							] 
 						) 
