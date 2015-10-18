@@ -17,7 +17,7 @@ require.def("store/static/datasources/appsource",
 								}, 
 								{ 
 									"id": "2", 
-									"titre" : "Jeux video en ligne",
+									"titre" : "Jeux video",
 									"img" : "static/image/jeuxvideo.png",
 									"fichier": "store/js/storegadget",
 									"lien": "",
@@ -34,7 +34,7 @@ require.def("store/static/datasources/appsource",
 								{ 
 									"id": "4", 
 									"titre": "Television sur internet", 
-									"img" : "static/image/tv.jpg",
+									"img" : "static/image/tv.png",
 									"fichier": "store/js/storehabillement",
 									"lien": "",
 									"details" : "<div style='color:red;font-size:42px;text-align:center;'>Télévision sur internet</div>Regarder plus de chaînes de télévvision"
@@ -51,6 +51,22 @@ require.def("store/static/datasources/appsource",
 									"id": "6", 
 									"titre" : "Cours en ligne",
 									"img" : "static/image/cours.png",
+									"fichier": "store/js/storevilla",
+									"lien": "",
+									"details" : "<div style='color:red;font-size:42px;text-align:center;'>Cours en ligne<div>Regarder tous les cours en ligne que vous voulez!"
+								}, 
+								{ 
+									"id": "7", 
+									"titre" : "Facebook",
+									"img" : "static/image/facebook.png",
+									"fichier": "store/js/storevilla",
+									"lien": "",
+									"details" : "<div style='color:red;font-size:42px;text-align:center;'>Cours en ligne<div>Regarder tous les cours en ligne que vous voulez!"
+								}, 
+								{ 
+									"id": "8", 
+									"titre" : "Google",
+									"img" : "static/image/google.png",
 									"fichier": "store/js/storevilla",
 									"lien": "",
 									"details" : "<div style='color:red;font-size:42px;text-align:center;'>Cours en ligne<div>Regarder tous les cours en ligne que vous voulez!"
